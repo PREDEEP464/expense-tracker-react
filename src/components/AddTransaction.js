@@ -12,13 +12,12 @@ export const AddTransaction = () => {
     const newTransaction = {
       id: Math.floor(Math.random() * 100000000),
       text,
-      amount: +amount // Convert amount to a number
+      amount: +amount
     };
 
-    // Add transaction
+
     addTransaction(newTransaction);
 
-    // Clear input fields
     setText('');
     setAmount('');
   }
@@ -37,7 +36,7 @@ export const AddTransaction = () => {
           />
         </div>
         <div className="form-control">
-          <label htmlFor="amount">Amount (Use - for expense)</label>
+          <label htmlFor="amount">Amount (Use -₹ for expense)</label>
           <input 
             type="number" 
             value={amount} 
